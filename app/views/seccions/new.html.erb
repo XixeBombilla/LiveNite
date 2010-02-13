@@ -1,0 +1,18 @@
+<div id="contenidoGeneral">
+<div id="txtHeadRed"><h1>Nueva Seccion</h1></div>
+<div id="ttAutor">
+<% form_for(@seccion) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.submit "Crear Seccion" %>
+  </p>
+<% end %>
+
+<%= link_to 'Regresar', seccions_path %>
+</div>
+</div>

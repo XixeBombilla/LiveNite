@@ -1,0 +1,65 @@
+
+<div id="contenidoGeneral" >
+   <div id="header"><img src="img/logo.png" /></div>
+<div id="txtHeadRed"><h1>Lista de Articulos</h1></div>
+<div id="txtAutor">
+<table border="1">
+  <tr>
+    <th>Titulo</th>
+    <th>Autor</th>
+    <th>Contenido</th>
+    <th>Fecha</th>
+    <th>Seccion</th>
+  </tr>
+
+<% for articulo in @articulos %>
+  <tr>
+    <td><%=h articulo.titulo %></td>
+    <td><%=h articulo.autor %></td>
+    <td><%=h truncate(articulo.contenido, 50) %></td>
+    <td><%=h articulo.fecha.strftime("%I:%M%p del %d/%m/%y") %></td>
+    <td><%=h articulo.seccion.nombre %></td>
+    <td><%= link_to 'Mostrar', articulo %> </td> 
+    <td><%= link_to 'Editar', edit_articulo_path(articulo) %> </td>
+    <td><%= link_to 'Eliminar', articulo, :confirm => 'Seguro que quieres eliminar?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+
+<br />
+
+<%= link_to 'Crear Articulo Nuevo', new_articulo_path %> 
+<%= link_to 'Regresar a Menu', publico_path %>
+
+<div id="txtHeadRed"><h1>Articulos por Seccion</h1></div>
+<% for sec in @todosArticulos %>
+ <div id="txtAutor"><h2><%= sec.nombre %></h2></div>
+			
+
+			<ol>
+				<% sec.articulos.each do |articulo| %>
+				 <div id="txtAutor">
+						<table border="1">
+						  <tr>
+							<th>Titulo</th>
+							<th>Contenido</th>
+							<th>Fecha</th>
+							<th>Cambios</th>
+						   </tr>
+						   <tr>
+							<td><%= link_to articulo.titulo, articulo%></td>
+							<td><%= truncate(articulo.contenido, 50) %></td>
+							<td><%= articulo.fecha %></td>
+							<td><%= link_to 'Mostrar', articulo %></td>|
+							<td><%= link_to 'Editar', edit_articulo_path(articulo) %></td>|
+							<td><%= link_to 'Eliminar', articulo, :confirm => 'Eliminar el Articulo?', :method => :delete %></td>
+						   </tr>
+						</table>
+					
+				</div>
+				<% end %>
+		</ol>
+<% end %>
+</div>
+

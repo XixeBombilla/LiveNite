@@ -1,0 +1,14 @@
+
+  <p>
+     <%= f.label :articulo %><br />
+    <%= f.collection_select(:articulo_id, Articulo.all, :id, :titulo) %>
+  </p>
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+
+<p>
+  <%= f.label :foto %><br />
+  <%= f.file_field :photo %>
+</p>

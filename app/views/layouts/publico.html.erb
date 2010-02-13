@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <%= stylesheet_link_tag 'estilos' %>
+    <link rel="stylesheet" href="/stylesheets/lightbox.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="/javascripts/lightbox/prototype.js"></script>
+<script type="text/javascript" src="/javascripts/lightbox/scriptaculous.js?load=effects,builder"></script>
+<script type="text/javascript" src="/javascripts/lightbox/lightbox.js"></script>
+
+	<link rel="shortcut icon" href="../../img/favico.png">
+	<title>LiveNite.net</title>
+</head>
+<body>
+	 	<% if logged_in?  %>
+			<a style="color:white;"><%= link_to "Modifica Articulos", articulos_path %></a>
+			<a style="color:white;"><%= link_to "Modifica Fotos", fotos_path %></a>
+			<a style="color:white;"> <%= link_to "Salir", logout_path %></a>
+		<% else %>
+			<a  style="color:white;"> Login: <%= link_to "Ingresar", login_path %></a>
+		<% end  %>
+		
+	<%= yield  %>
+</body>
+</html>

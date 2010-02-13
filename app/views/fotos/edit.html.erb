@@ -1,0 +1,17 @@
+<div id="contenidoGeneral">
+<div id="txtHeadRed"><h1>Editar Foto</h1>
+<div id="txtAutor">
+<% form_for @foto, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+
+	<%= render :partial => 'form', :locals => {:f => f }  %>
+
+  <p>
+    <%= f.submit 'Actualizar' %>
+  </p>
+<% end %>
+
+<%= link_to 'Mostrar', @foto %> |
+<%= link_to 'Regresar', fotos_path %>
+</div>
+</div>

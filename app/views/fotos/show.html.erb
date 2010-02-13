@@ -1,0 +1,21 @@
+<div id="contenidoGeneral">
+<div id="txtHeadRed"><h1>
+<p>
+  
+  <%=h @foto.articulo.titulo %>
+</p></div>
+
+<div id="txtAutor">
+
+<p>
+  <b>Nombre:</b>
+  <%=h @foto.nombre %>
+</p>
+<p>
+  <%= image_tag @foto.photo.url(:normal) %>
+</p>
+
+<%= link_to 'Editar', edit_foto_path(@foto) %> |
+<%= link_to 'Regresar', fotos_path %>
+</div>
+</div>

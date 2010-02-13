@@ -1,0 +1,47 @@
+
+<div id="contenidoGeneral">
+   <div id="header"><img src="img/logo.png" /></div>
+<div id="txtHeadRed"><h1>Lista de Fotos</h1>
+<div id="txtAutor">
+<table border="1" >
+  <tr>
+    <th>Articulo</th>
+    <th>Nombre</th>
+    <th>Imagen</th>
+  </tr>
+
+<% @fotos.each do |foto| %>
+  <tr>
+    <td><%=h foto.articulo.titulo %></td>
+    <td><%=h foto.nombre %></td>
+    <td><%= image_tag foto.photo.url(:small) %></td>
+    <td><%= link_to 'Mostrar', foto %></td>
+    <td><%= link_to 'Editar', edit_foto_path(foto) %></td>
+    <td><%= link_to 'Eliminar', foto, :confirm => 'ÀEliminar la Foto?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+</div>
+<br />
+
+<%= link_to 'Agregar Foto', new_foto_path %>
+
+<div id="txtHeadRed"><h1>Fotos por Articulo</h1></div>
+                                   
+                                      <% for secA in  @todosArticulosFotos %>
+                                            <div id="txtAutor"><h2><%= secA.titulo %></h2></div>
+                                                   <ol>
+                                                                       <% secA.fotos.each do |foto| %>
+                                                                          <div id="txtAutor">
+                                                                                 <ol>
+                                                                                              <tr>
+                                                                                              <td><%=  foto.nombre%></td>
+                                                                                              </tr>
+                                                                                      </ol>					
+                                                                          </div>
+                                                                        <% end %>
+                                                                  
+                                                   </ol>
+                                      <% end %>
+                                
+</div>

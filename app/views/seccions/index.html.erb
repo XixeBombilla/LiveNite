@@ -1,0 +1,26 @@
+<div id="contenidoGeneral">
+  <div id="header"><img src="img/logo.png" /></div>
+<div id="txtHeadRed"><h1>Lista de Secciones</h1></div>
+<div id="txtAutor">
+<table>
+  <tr>
+    <th>Nombre</th>
+  </tr>
+
+<% for seccion in @seccions %>
+  <tr>
+    <td><%=h seccion.nombre %></td>
+    <td><%= link_to 'Mostrar', seccion %></td>
+    <td><%= link_to 'Editar', edit_seccion_path(seccion) %></td>
+    <td><%= link_to 'Eliminar', seccion, :confirm => 'Estas seguro que deseas eliminar?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nueva Seccion', new_seccion_path %>
+<%= link_to 'Regresar a Menu', publico_path %>
+</div>
+</div>
+

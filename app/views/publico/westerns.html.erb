@@ -1,0 +1,90 @@
+
+
+<div id="contenido">
+    <div id="header">
+		<div id="headerA">
+		<div id="miniMenu">
+		   <%= link_to 'Contacto', :action => "contacto"  %>
+		     <%= link_to 'Nosotros', :action => "nosotros"  %>
+                     <%= link_to 'Informacion', :action => "informacion" %>  
+		</div>
+		<div id="pags"><%= link_to '<img src="/img/logo.png" width="170px" height="30px" border="0" />', publico_path %>
+		</div>
+		</div>
+        <div id="barra"></div>
+		<div id="derechos">Todos los derechos reservados 2010 - 2011 /// LiveNite.net</div>
+    </div>
+    <div id="cuerpo">
+    	<div  id="cuerpoIZQSec">
+		<div id="txtHead"><%=@articuloWestern.titulo%></div>
+		    <div id="txtAutor">Por: <%= @articuloWestern.autor %><br /></div>
+		    <div id="txtFecha"><%= @articuloWestern.fecha.strftime("%I:%M%p del %d/%m/%y") %><br /></div>
+			<% if @articuloWestern.contenido.length <= 1000 %>
+			<div id="txtIZQ"><%= RedCloth.new(@articuloWestern.contenido).to_html %><br /></div>
+			<% else %>
+			<% primerWe = @articuloWestern.contenido[0..1000] %>
+			<% segundaWe = @articuloWestern.contenido[1001..-1] %>
+			<div id="txtIZQ"><%= (RedCloth.new(primerWe).to_html) %><br /></div>
+			<div id="txtDER"><%= truncate((RedCloth.new(segundaWe).to_html), 955) %><br /></div>
+			<%- end -%>
+	</div>
+		<div id="cuerpoDERSec">
+		    <div id="publicidadA">
+				<object type="application/x-shockwave-flash" data="/img/publicidad/western/publiA.swf" width="440" height="80">
+			    <param name="movie" value="/img/publicidad/western/publiA.swf" />
+			    <param name="quality" value="high"/>
+			    <param name="wmode" value="transparent"/>
+			</object>
+		</div>
+		    <div id="imagenA">
+			<ul>
+			 <% if !@fotosWestern.blank? %>
+			 
+					    <% for foto in @fotosWestern %>
+					      <li><%= link_to image_tag(foto.photo.url(:small)), foto.photo.url(:normal), :title=>foto.nombre, :rel=>"lightbox[fotos]" %></li>
+					    <% end %>
+				
+ 			<% end %>
+			</ul>    
+		    </div>
+		    <div id="imagenB">
+   
+		    </div>
+		    <div id="publicidadB">	<object type="application/x-shockwave-flash" data="/img/publicidad/western/publiB.swf" width="230" height="250">
+			    <param name="movie" value="/img/publicidad/western/publiB.swf" />
+			    <param name="quality" value="high"/>
+			    <param name="wmode" value="transparent"/>
+			</object></div>
+		    <div id="contenedorTitulos">
+			<div id="txtAT" > 
+			   
+				<% @articulosTodosWestern.each do |articulo| %>
+					<div id="cuadrito" >
+					    <p><%=link_to truncate(articulo.titulo,25),:controller=>'publico', :action=>'westerns', :id=>articulo%> por:  <%=truncate(articulo.autor,10)%></p>    
+					</div>
+				<% end %>
+				
+				
+			</div>
+		    </div>
+		</div>
+
+	</div>
+    <div id="barra"></div>
+	<div id="menu">
+	    
+	    <ul id="botonesSec" >
+		    <li><%= link_to 'Rock', :action => "rocks",:id=>@articuloRock  %></li>
+		    <li><%= link_to 'Beat', :action => "beats",:id=>@articuloBeat  %></li>
+		    <li><%= link_to 'Cultura', :action => "culturals",:id=>@articuloCultura  %></li>
+		      <li><%= link_to 'Expo', :action => "expos",:id=>@articuloExpo  %></li>
+		    <li><%= link_to 'Personas', :action => "personas", :id=> @articuloPersona %></li>
+		    <li><%= link_to 'Western', :action => "westerns", :id=> @articuloWestern  %></li>
+		    <li><%= link_to 'Sports', :action => "sports", :id=> @articuloSport  %></li>
+		    <li><%= link_to 'Moda', :action => "modas", :id=> @articuloModa   %></li>
+		    <li><%= link_to 'Skool', :action => "skools", :id=> @articuloSkool   %></li>
+		    <li><%= link_to 'VIP', :action => "vips", :id=> @articuloVip  %></li>
+	    </ul>
+		    <div class="clear"></div>		
+	</div>
+</div>

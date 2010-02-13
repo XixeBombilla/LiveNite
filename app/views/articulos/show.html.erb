@@ -1,0 +1,35 @@
+<div id="contenidoGeneral">
+<div id="txtHeadRed"><h1>
+  <p>
+  <b> <%=h @articulo.seccion.nombre %> :</b>
+  <%=h @articulo.titulo %>
+</p>
+</h1></div>
+
+<div id="txtAutor">
+<p>
+  <b>Autor:</b>
+  <%=h @articulo.autor %>
+</p>
+
+<p>
+  <b>Contenido:</b>
+  <%=h @articulo.contenido %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%=h @articulo.fecha.strftime("%I:%M%p del %d/%m/%y") %>
+</p>
+
+<p>
+  <b>Seccion:</b>
+  <%=h @articulo.seccion.nombre %>
+</p>
+
+
+<%= link_to 'Editar', edit_articulo_path(@articulo) %> |
+<%= link_to 'Regresar', articulos_path %> |
+<%= link_to 'Regresar a Menu', publico_path %>
+</div>
+</div>

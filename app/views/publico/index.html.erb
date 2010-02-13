@@ -1,0 +1,67 @@
+<div id="contenido">
+    <div id="header">
+		<div id="headerA">
+		<div  id="miniMenu">
+		  <%= link_to 'Contacto', :action => "contacto"  %>
+		     <%= link_to 'Nosotros', :action => "nosotros"  %> 
+		  <%= link_to 'Informacion', :action => "informacion" %>
+		</div>
+		    <div id="pags">
+			<img src="/img/icons/myspace.png" width="20px" height="20px"  />
+			<a href="http://thekdivakshow.blogspot.com/"><img src="/img/icons/blogspot.png" width="20px" height="20px" border="0"/></a>
+			<a href="http://www.facebook.com/livenite?ref=search&sid=1823277869.1633368244..1"><img src="/img/icons/facebook.png" width="20px" height="20px" border="0" /> </a>
+			<img src="/img/icons/youtube.png" width="20px" height="20px" />	
+		    </div>  
+		</div>
+        <div id="barra"></div>
+		<div id="derechos">Todos los derechos reservados 2010 - 2011 /// LiveNite.net</div>
+    </div>
+    <div id="cuerpo">
+    	<div id="cuerpoIZQ"><img src="img/logoPortada.jpg" width="470" height="400" /></div>
+		<div id="cuerpoDER">
+		  <div id="txtHead">	
+		  	<%=@articuloPrincipal.titulo%>
+		  </div>
+	      <div id="txtFecha">
+		  	<%= @articuloPrincipal.autor %><br />
+			<%= @articuloPrincipal.fecha.strftime("%I:%M%p del %d/%m/%y") %>
+		  </div>
+		<% if @articuloPrincipal.contenido.length <= 600 %>
+		
+		<div id="txtIZQ">
+
+		<%= RedCloth.new(@articuloPrincipal.contenido).to_html %><br />	  
+		  
+		  </div>
+		<% else %>
+		<% primer = @articuloPrincipal.contenido[0..600] %>
+		<% segunda = @articuloPrincipal.contenido[601..-1] %>
+		<div id="txtIZQ">
+			<%= (RedCloth.new(primer).to_html) %><br />
+		</div>
+    <div id="txtDER">
+		<%= truncate((RedCloth.new(segunda).to_html), 655) %><br />
+	</div>
+	<%- end -%>
+      </div>
+
+	</div>
+    <div id="barra"></div>
+    <div id="menu">
+	
+	<ul id="botones">
+		<li><%= link_to "", {:controller=>'publico', :action=>'rocks', :id=>@articuloRock}, {:id => "boton_rock"} %></li>
+		<li><%= link_to "", {:controller=>'publico', :action=>'beats', :id=>@articuloBeat}, {:id => "boton_beat"} %></li>
+		<li><%= link_to "", {:controller=>'publico', :action=>'culturals', :id=>@articuloCultura}, {:id => "boton_cultura"} %></li>
+		<li><%= link_to "", {:controller=>'publico', :action=>'expos', :id=>@articuloExpo}, {:id => "boton_expo"} %></li>
+		<li><%= link_to "", {:controller=>'publico', :action=>'personas', :id=>@articuloPersona}, {:id => "boton_personas"} %></li>
+		<li><%= link_to "", {:controller=>'publico', :action=>'westerns', :id=>@articuloWestern}, {:id => "boton_western"} %></li>
+		<li><%= link_to "", {:controller=>'publico', :action=>'sports', :id=>@articuloSport}, {:id => "boton_sports"} %></li>
+		<li><%= link_to "", {:controller=>'publico', :action=>'modas', :id=>@articuloModa}, {:id => "boton_moda"} %></li>
+		<li><%= link_to "", {:controller=>'publico', :action=>'skools', :id=>@articuloSkool}, {:id => "boton_skool"} %></li>
+		<li><%= link_to "", {:controller=>'publico', :action=>'vips', :id=>@articuloVip}, {:id => "boton_vip"} %></li>
+	</ul>
+		<div class="clear"></div>		
+	</div>
+</div>
+

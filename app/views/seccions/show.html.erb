@@ -1,0 +1,9 @@
+<div id="contenidoGeneral">
+<div id="txtHeadRed">
+  <h1>Nombre de la Seccion:</h1></div>
+<div id="txtAutor">
+    <p><%=h @seccion.nombre %></p>
+<%= link_to 'Editar', edit_seccion_path(@seccion) %> |
+<%= link_to 'Regresar', seccions_path %>
+</div>
+</div>

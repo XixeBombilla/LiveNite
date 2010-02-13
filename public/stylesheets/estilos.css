@@ -1,0 +1,420 @@
+
+
+body{
+  background-image: url(../img/bkgd.jpg);
+	background-color: #000;
+	margin-top: 0px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	height:auto;
+		overflow:hidden;
+	 background-attachment: fixed;
+
+	
+			
+}
+
+a:link {
+  
+  color:#9c041d;
+}
+
+a:hover{
+  
+  color:#9c041d;
+}
+
+a:visited{
+  color:#c00523;
+}
+
+#contenido
+{
+	width:960px;
+	height:629px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#000;
+	
+	
+}
+
+
+
+#contenidoGeneral
+{
+	width:960px;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#000;
+	
+	
+	
+}
+
+#header
+{
+	clear:both;
+}
+
+#headerA
+{
+	clear:both;
+}
+
+#miniMenu
+{
+	float:left;
+	
+	color:#FFF;
+	margin-left:10px;
+}
+
+#pags
+{
+	float:right;
+	margin-right:10px;
+}
+
+#barra
+{
+clear:both;
+	
+	margin-bottom:4px;
+	height:1px;
+	background-color:#9c041d;
+	width:940px;
+	margin-left:10px;
+}
+
+#derechos
+{
+	float:right;
+	font-size:10px;
+	color:#9c041d;
+	margin-right:10px;
+}
+
+#cuerpo
+{
+	clear:both;
+height:400px;
+margin-left:10px;
+}
+
+#cuerpoIZQ
+{
+float:left;
+}
+
+#cuerpoDER
+{
+	float:right;
+	height:400px;
+	width:470px;
+	color:#FFF;
+}
+#cuerpoIZQSec
+{
+float:left;
+}
+
+#cuerpoDERSec
+{
+	float:right;
+	height:535px;
+	width:470px;
+	color:#FFF;
+}
+
+#txtHead
+{
+	font-size:24px;
+	color:#FFF;
+	margin-left:4px;
+	width:220px;
+	clear:both;
+	width:350px;
+}
+
+#txtAutor
+{
+	font-size:10px;
+	color:#FFF;
+	margin-left:4px;
+	clear:both;
+	margin-bottom:4px;
+}
+
+#txtFecha
+{
+	font-size:10px;
+	color:#9c041d;
+	margin-left:4px;
+	clear:both;
+	margin-bottom:14px;
+}
+
+#txtHeadRed
+{
+	font-size:12px;
+	color:#9c041d;
+	margin-left:4px;
+	clear:both;
+}
+
+#txtIZQ
+{
+	color:#FFF;
+	margin-left:4px;
+	margin-right:4px;
+	width:220px;
+	float:left;
+	text-align:justify;
+}
+
+#txtAT
+{
+	color:#FFF;
+	margin-right:4px;
+	float:right;
+	text-align: right;
+}
+
+
+#txtDER
+{
+	color:#FFF;
+	margin-left:4px;
+	width:220px;
+	float:left;
+	text-align:justify;
+}
+
+#menu
+{
+	clear:both;
+	width:940px;	
+	margin-left:10px;
+	height:176px;
+}
+
+#boton_rock{
+	display:block;
+	background: url(../img/btn/rock.png);
+	height:88px;
+	width:188px;
+}
+
+#boton_rock:hover {
+    background-image: url(../img/btn/rock_o.png);
+}
+
+
+
+#boton_beat {
+    display:block;
+	background-image: url(../img/btn/beat.png);
+	height:88px;
+	width:188px;
+}
+
+#boton_beat:hover {
+    background-image: url(../img/btn/beat_o.jpg);
+}
+#boton_cultura {
+    display:block;
+	background-image: url(../img/btn/cultura.png);
+	height:88px;
+	width:188px;
+}
+
+#boton_cultura:hover {
+    background-image: url(../img/btn/cultura_o.jpg);
+}
+#boton_expo {
+    display:block;
+	background-image: url(../img/btn/expo.png);
+	height:88px;
+	width:188px;
+}
+#boton_expo:hover {
+    background-image: url(../img/btn/expo_o.jpg);
+}
+#boton_personas {
+    display:block;
+	background-image: url(../img/btn/personas.png);
+	height:88px;
+	width:188px;
+}
+#boton_personas:hover {
+    background-image: url(../img/btn/personas_o.jpg);
+}
+#boton_western {
+    display:block;
+	background-image: url(../img/btn/western.png);
+	height:88px;
+	width:188px;
+}
+#boton_western:hover {
+    background-image: url(../img/btn/western_o.jpg);
+}
+#boton_sports {
+    display:block;
+	background-image: url(../img/btn/sports.png);
+	height:88px;
+	width:188px;
+}
+#boton_sports:hover {
+    background-image: url(../img/btn/sports_o.jpg);
+}
+#boton_moda {
+    display:block;
+	background-image: url(../img/btn/moda.png);
+	height:88px;
+	width:188px;
+}
+#boton_moda:hover {
+    background-image: url(../img/btn/moda_o.jpg);
+}
+#boton_skool {
+    display:block;
+	background-image: url(../img/btn/skool.png);
+	height:88px;
+	width:188px;
+}
+#boton_skool:hover {
+    background-image: url(../img/btn/skool_o.jpg);
+}
+#boton_vip {
+    display:block;
+	background-image: url(../img/btn/vip.png);
+	height:88px;
+	width:188px;
+}
+#boton_vip:hover {
+    background-image: url(../img/btn/vip_o.jpg);
+}
+#botones{
+	margin:0;
+	padding:0;
+	text-decoration:none;
+	 list-style-type: none;
+}
+
+#botones li {
+	background:#000000;
+	float:left;
+}
+#botonesSec{
+      
+	text-decoration:none;
+	 list-style-type: none;
+	 margin-left: auto;
+	 margin-right: auto;
+	text-align: center; 
+}
+
+#botonesSec li {
+	background:#000000;
+	float:left;
+	margin-right:24px;
+	margin-left: 24px;
+      
+	
+}
+#botones li a{
+	border:none;
+}
+
+.clear{
+	clear:both;
+}
+
+#publicidadA{
+  margin-top:4px;
+  margin-bottom:6px;
+  margin-left:16px;
+  margin-right:4px;
+  clear: both;
+  height:80px;
+}
+#imagenB{
+  margin-top:4px;
+  margin-bottom:6px;
+  margin-right:4px;
+  clear: both;
+  
+}
+
+#imagenB ul{
+  text-decoration:none;
+  
+}
+
+#imagenB li {
+  margin-left:1px;
+  margin-right:1px;
+  border:none;
+  display: inline;
+  list-style-type: none;
+
+}
+#imagenA{
+  margin-top:4px;
+  margin-bottom:6px;
+  margin-right:4px;
+  clear: both;
+  height:168px;
+  overflow:auto;
+  width:465px;
+}
+
+#imagenA a img{
+  border:2px solid #000;
+}
+#imagenA a img:hover{
+  border:2px solid #9c041d;
+}
+
+
+
+#imagenA ul{
+  text-decoration:none;
+  
+}
+
+#imagenA li {
+  margin-left:1px;
+  margin-right:1px;
+  border:none;
+  display: inline;
+  list-style-type: none;
+
+}
+#publicidadB
+{
+	float:left;
+	height:250px;
+	width:230px;
+	color:#FFF;
+}
+
+#contenedorTitulos
+{
+	float:right;
+	height:250px;
+	width:230px;
+	color:#FFF;
+	margin-right:4px;
+	
+	background-color:#9c041d;
+}
+
+#cuadrito{
+  background-color: #000;
+  margin-bottom:4px;
+  width:230px;
+
+}
+
